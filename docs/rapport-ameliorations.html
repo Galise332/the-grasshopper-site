@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>The Grasshopper : améliorations du site</title>
+<style>
+  @page { size: A4; margin: 18mm 16mm; }
+  * { box-sizing: border-box; }
+  body { font-family: "Segoe UI", Arial, sans-serif; font-size: 10.5pt; line-height: 1.5; color: #23302a; margin: 0; }
+  h1 { font-size: 26pt; color: #1f5a38; margin: 0 0 4pt; line-height: 1.1; }
+  h2 { font-size: 15pt; color: #1f5a38; margin: 22pt 0 8pt; padding-bottom: 4pt; border-bottom: 2pt solid #ead9b8; break-after: avoid; }
+  h3 { font-size: 11.5pt; color: #b53a14; margin: 14pt 0 4pt; break-after: avoid; }
+  p { margin: 0 0 8pt; }
+  a { color: #1f5a38; }
+  .cover { background: #e4f3e6; border-radius: 12pt; padding: 22pt 24pt; margin-bottom: 16pt; }
+  .cover p { margin: 0; }
+  .sub { font-size: 13pt; color: #55645c; margin-bottom: 12pt !important; }
+  .meta { font-size: 9.5pt; color: #55645c; }
+  .kpis { display: flex; gap: 10pt; margin: 14pt 0; }
+  .kpi { flex: 1; border: 1.5pt solid #ead9b8; border-radius: 10pt; padding: 10pt 12pt; background: #fff8ec; }
+  .kpi b { display: block; font-size: 15pt; color: #b53a14; line-height: 1.2; }
+  .kpi span { font-size: 9pt; color: #55645c; }
+  table { width: 100%; border-collapse: collapse; margin: 6pt 0 10pt; font-size: 9.5pt; }
+  th, td { text-align: left; vertical-align: top; padding: 6pt 8pt; border-bottom: 1pt solid #ead9b8; }
+  th { background: #1f5a38; color: #fff; font-weight: 600; }
+  tr { break-inside: avoid; }
+  td:first-child { width: 22%; font-weight: 600; }
+  .before { color: #8a2c10; }
+  .after { color: #1f5a38; }
+  .shots { display: flex; gap: 10pt; align-items: flex-start; margin: 8pt 0; }
+  .shots figure { margin: 0; flex: 1; }
+  .shots img { width: 100%; border: 1pt solid #ead9b8; border-radius: 6pt; }
+  figcaption { font-size: 8.5pt; color: #55645c; text-align: center; margin-top: 3pt; }
+  .note { background: #fdeed3; border-left: 4pt solid #d94a1e; padding: 8pt 12pt; border-radius: 6pt; margin: 8pt 0; break-inside: avoid; }
+  ul { margin: 0 0 8pt; padding-left: 16pt; }
+  li { margin-bottom: 3pt; }
+  code { font-family: Consolas, monospace; font-size: 9pt; background: #f3eee2; padding: 0 3pt; border-radius: 3pt; }
+  .footer { margin-top: 22pt; padding-top: 8pt; border-top: 1pt solid #ead9b8; font-size: 9pt; color: #55645c; }
+  .page-break { break-before: page; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <h1>The Grasshopper</h1>
+  <p class="sub">Refonte du site : liste des améliorations</p>
+  <p class="meta">Site d'origine analysé : www.thegrasshopper.be/fr · Relevé du 29/09/2026<br>
+  Nouveau site (démonstration) : <a href="https://galise332.github.io/the-grasshopper-site/">galise332.github.io/the-grasshopper-site</a><br>
+  Code source : <a href="https://github.com/Galise332/the-grasshopper-site">github.com/Galise332/the-grasshopper-site</a></p>
+</div>
+
+<p><strong>Règle suivie :</strong> aucune information n'a été inventée. Tous les textes, adresses, horaires, téléphones, e-mails, numéros de TVA, prix et conditions viennent du site d'origine. Seules la mise en forme, la structure et la technique ont changé.</p>
+
+<div class="kpis">
+  <div class="kpi"><b>690 Ko → 24 Ko</b><span>Poids du code HTML de la page d'accueil</span></div>
+  <div class="kpi"><b>0 → 1</b><span>Titre principal (H1) par page</span></div>
+  <div class="kpi"><b>1 → 6</b><span>Pages avec une meta description propre</span></div>
+  <div class="kpi"><b>1 → 2</b><span>Magasins décrits dans les données structurées</span></div>
+</div>
+
+<h2>1. Aperçu du nouveau site</h2>
+<div class="shots">
+  <figure style="flex:1.9"><img src="capture-bureau.png" alt=""><figcaption>Page d'accueil sur ordinateur</figcaption></figure>
+  <figure><img src="capture-mobile.png" alt=""><figcaption>Page d'accueil sur mobile</figcaption></figure>
+</div>
+
+<h2 class="page-break">2. Référencement (SEO)</h2>
+<table>
+  <tr><th>Point</th><th>Site d'origine</th><th>Nouveau site</th></tr>
+  <tr><td>Titre de la page d'accueil</td>
+      <td class="before">« The Grasshopper Toy shop | The Grasshopper | Brusselr » (faute de frappe, pas de mot-clé en français)</td>
+      <td class="after">« The Grasshopper | Magasin de jouets à Bruxelles et Louvain »</td></tr>
+  <tr><td>Meta description</td>
+      <td class="before">Une seule, sur l'accueil, en trois langues mélangées. Aucune sur les pages Qui sommes-nous, Contact, Chèque cadeau et Conditions générales.</td>
+      <td class="after">Une description unique par page, en français, de moins de 170 caractères, construite avec les informations du site.</td></tr>
+  <tr><td>Titres H1</td>
+      <td class="before">Aucun H1 sur les pages analysées. Le nom du magasin est en H2 et le slogan en H6.</td>
+      <td class="after">Un seul H1 par page, puis H2 et H3 dans l'ordre.</td></tr>
+  <tr><td>Données structurées</td>
+      <td class="before">Un seul magasin déclaré (Bruxelles), sans horaires ni e-mail. Louvain absent.</td>
+      <td class="after">Deux fiches <code>ToyStore</code> (Bruxelles et Louvain) avec adresse, téléphone, e-mail, horaires, TVA et moyens de paiement. Ajout de <code>Organization</code>, <code>WebSite</code>, <code>FAQPage</code> et <code>BreadcrumbList</code>.</td></tr>
+  <tr><td>Textes alternatifs des images</td>
+      <td class="before">Vides ou inexploitables : « 17 », « 20 », « 5 », « cheque.webp », « plecuches », « cuisisner ».</td>
+      <td class="after">Un texte descriptif sur chaque image (« Catégorie Peluches », etc.).</td></tr>
+  <tr><td>Sitemap</td>
+      <td class="before">Contient des pages de test ou vides : <code>/test</code>, <code>/blank-1</code>, <code>/oudehome</code>, <code>/bg</code>, <code>/achtergrond</code>, <code>/NewCollectionName</code>.</td>
+      <td class="after">Sitemap propre avec les 6 pages utiles uniquement.</td></tr>
+  <tr><td>Page Listes</td>
+      <td class="before">Marquée <code>noindex</code> : invisible pour Google.</td>
+      <td class="after">Page prête à être indexée, avec titre et description sur la liste de naissance.</td></tr>
+  <tr><td>Partage sur les réseaux</td>
+      <td class="before">Pas d'image de partage déclarée sur l'accueil.</td>
+      <td class="after">Open Graph et Twitter Card complets avec image 1200 × 630.</td></tr>
+  <tr><td>Questions fréquentes</td>
+      <td class="before">Aucune. Les réponses sont enfouies dans les conditions générales.</td>
+      <td class="after">7 questions en page d'accueil, réponses reprises des conditions générales, de l'accueil et de la page Chèque cadeau.</td></tr>
+  <tr><td>Balise canonique, langue, robots.txt</td>
+      <td class="before">Présents.</td>
+      <td class="after">Conservés : canonique par page, <code>lang="fr-BE"</code>, <code>robots.txt</code> avec lien vers le sitemap.</td></tr>
+</table>
+
+<h2>3. Contenu et clarté</h2>
+<table>
+  <tr><th>Point</th><th>Site d'origine</th><th>Nouveau site</th></tr>
+  <tr><td>Langues mélangées</td>
+      <td class="before">Sur la version française : menu « Mijn adressen », boutons « Verstuur vraag naar Brussel », message « Uw vraag is succesvol verzonden! ».</td>
+      <td class="after">Tout le site est en français.</td></tr>
+  <tr><td>Pages vides</td>
+      <td class="before">« Information de sécurité » est vide. « Déco » affiche « Il n'y a aucun article à afficher pour le moment ».</td>
+      <td class="after">Ces deux entrées sont retirées du menu tant qu'elles n'ont pas de contenu.</td></tr>
+  <tr><td>Orthographe</td>
+      <td class="before">« Maison de poupeés », « Cheque Cadeau », « Chateaux forts », « Bebetes », « peuvent etre utiliser », « anniver-saire ».</td>
+      <td class="after">Corrigé : « Maison de poupées », « Chèque cadeau », « Châteaux forts », « Bébêtes », « peuvent être utilisés », « anniversaire ».</td></tr>
+  <tr><td>Horaires</td>
+      <td class="before">Visibles seulement en bas de l'accueil et sur la page Contact.</td>
+      <td class="after">Bandeau d'horaires en haut de chaque page, et fiches magasins sur l'accueil et la page Contact.</td></tr>
+  <tr><td>Infos légales</td>
+      <td class="before">Numéros de TVA uniquement sur la page Contact.</td>
+      <td class="after">TVA, raison sociale et adresse du siège dans le pied de page de chaque page.</td></tr>
+  <tr><td>Conditions générales</td>
+      <td class="before">Un long bloc de texte sans navigation.</td>
+      <td class="after">Texte identique, avec un sommaire cliquable des 12 articles.</td></tr>
+  <tr><td>Chèques cadeaux</td>
+      <td class="before">Deux phrases qui se répètent sur le montant libre.</td>
+      <td class="after">Texte repris sans la répétition, les 10 montants affichés en grille, validité de 12 mois mise en avant.</td></tr>
+</table>
+
+<h2 class="page-break">4. Design et expérience</h2>
+<table>
+  <tr><th>Point</th><th>Site d'origine</th><th>Nouveau site</th></tr>
+  <tr><td>Menu</td>
+      <td class="before">Plus de 30 entrées, dont les 22 catégories dans un sous-menu.</td>
+      <td class="after">6 entrées. Les catégories sont présentées en grille illustrée sur l'accueil.</td></tr>
+  <tr><td>Page d'accueil</td>
+      <td class="before">Un texte de bienvenue puis les vignettes, sans photo des magasins.</td>
+      <td class="after">Accroche, photo de façade, deux boutons d'action, catégories, présentation, magasins et questions fréquentes.</td></tr>
+  <tr><td>Identité visuelle</td>
+      <td class="before">Fond décoratif, typographie par défaut.</td>
+      <td class="after">Palette tirée du logo (vert et orange de la sauterelle), typographie ronde et lisible. Les illustrations de catégories d'origine sont conservées.</td></tr>
+  <tr><td>Mobile</td>
+      <td class="before">Version mobile générée par Wix.</td>
+      <td class="after">Mise en page pensée pour le mobile : menu dépliant, boutons pleine largeur, catégories sur 2 colonnes.</td></tr>
+  <tr><td>Actions rapides</td>
+      <td class="before">Téléphone et adresse en texte simple.</td>
+      <td class="after">Boutons « Appeler » et « Itinéraire » pour chaque magasin, adresses e-mail cliquables.</td></tr>
+  <tr><td>Accessibilité</td>
+      <td class="before">Images sans texte alternatif, pas de H1.</td>
+      <td class="after">Lien « Aller au contenu », navigation au clavier, contours de focus visibles, animations coupées si l'utilisateur le demande.</td></tr>
+</table>
+
+<h2>5. Performance technique</h2>
+<table>
+  <tr><th>Point</th><th>Site d'origine</th><th>Nouveau site</th></tr>
+  <tr><td>Code HTML de l'accueil</td><td class="before">690 Ko</td><td class="after">24 Ko</td></tr>
+  <tr><td>Feuille de style et script</td><td class="before">Scripts et styles de la plateforme Wix</td><td class="after">Un fichier CSS de 13 Ko et un script de moins de 1 Ko</td></tr>
+  <tr><td>Images</td><td class="before">JPG et PNG</td><td class="after">Format WebP, dimensions déclarées, chargement différé pour les images hors écran</td></tr>
+  <tr><td>Hébergement</td><td class="before">Wix</td><td class="after">Site statique, hébergeable partout (ici GitHub Pages)</td></tr>
+</table>
+<p class="meta">Les poids indiqués sont ceux des fichiers mesurés le 29/09/2026. Aucun test de vitesse Lighthouse ou PageSpeed n'a été lancé : les scores ne sont donc pas chiffrés ici.</p>
+
+<h2>6. Points à confirmer avec le magasin</h2>
+<div class="note">
+  <ul>
+    <li><strong>E-mail de Bruxelles :</strong> le site d'origine affiche <code>buy@thegrasshopper.be</code> sur la page Contact et dans l'article 1 des conditions, mais <code>info@thegrasshopper.be</code> en bas des conditions générales. Le nouveau site utilise <code>buy@thegrasshopper.be</code>.</li>
+    <li><strong>Horaires de décembre :</strong> la page Contact renvoie vers « les exceptions pour le mois de décembre sur la page d'accueil », mais l'accueil n'en affiche aucune. La phrase n'a pas été reprise.</li>
+    <li><strong>Photos des magasins :</strong> le site d'origine n'indique pas quelle photo correspond à quel magasin. Elles sont donc utilisées sans légende de ville.</li>
+    <li><strong>Galerie :</strong> la page Qui sommes-nous annonce 22 photos, seules 3 étaient accessibles au relevé.</li>
+  </ul>
+</div>
+
+<h2>7. Limites de cette démonstration</h2>
+<ul>
+  <li><strong>Boutique en ligne :</strong> le catalogue (937 produits dans le sitemap), le panier et le paiement restent sur le site actuel. Les catégories et le bouton de commande des chèques cadeaux y renvoient.</li>
+  <li><strong>Formulaire de contact :</strong> remplacé par des liens e-mail et téléphone, car un site statique n'envoie pas de formulaire sans service externe.</li>
+  <li><strong>Langues :</strong> seule la version française est refaite. Le site d'origine existe aussi en néerlandais.</li>
+  <li><strong>Indexation :</strong> la démonstration porte la balise <code>noindex</code> pour ne pas concurrencer le site officiel avec un contenu dupliqué. Tout le SEO est en place : il suffit de passer <code>DEMO = False</code> dans <code>build.py</code> le jour de la mise en ligne sur le vrai nom de domaine.</li>
+</ul>
+
+<p class="footer">Document préparé par Ascension · contact@ascensionagency.fr · 0470 78 04 01</p>
+
+</body>
+</html>
